@@ -3,18 +3,18 @@
 @layer base {
   :root {
     --background: 210 40% 98%;
-    --foreground: 217 33% 17%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 217 33% 17%;
-    --primary: 211 100% 26%;
+    --card-foreground: 222 47% 11%;
+    --primary: 199 89% 48%; /* Portal Cyan / Sky */
     --primary-foreground: 0 0% 100%;
     --secondary: 214 32% 91%;
-    --secondary-foreground: 217 33% 17%;
+    --secondary-foreground: 222 47% 11%;
     --muted: 214 32% 91%;
     --muted-foreground: 215 16% 47%;
-    --accent: 204 100% 97%;
-    --accent-foreground: 211 100% 26%;
-    --action: 200 98% 39%;
+    --accent: 199 95% 94%;
+    --accent-foreground: 201 96% 32%;
+    --action: 198 93% 43%;
     --action-foreground: 0 0% 100%;
     --reserved: 161 94% 30%;
     --reserved-foreground: 0 0% 100%;

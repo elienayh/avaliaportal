@@ -1,6 +1,6 @@
 {
   "name": "AvaliaPortal - Gestão de Avaliações",
-  "description": "Sistema de agendamento e gestão de avaliações escolares do Portal do Saber (SRE Carangola)",
+  "description": "Sistema oficial de agendamento e calendário de avaliações escolares do Colégio Portal",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

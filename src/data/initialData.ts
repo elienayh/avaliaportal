@@ -175,7 +175,7 @@ export const INITIAL_USERS: User[] = [
   },
   {
     id: '6ab4ebd6258dca0ab03b43b6',
-    full_name: 'SRE CARANGOLA COORDENACAO',
+    full_name: 'Coordenação Pedagógica',
     email: 'nte29.coord@educacao.mg.gov.br',
     role: 'admin',
     password: 'admin'

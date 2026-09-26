@@ -16,12 +16,14 @@ import {
   Calendar as CalendarIcon,
   ChevronLeft,
   ChevronRight,
+  FileDown,
   Filter,
   Layers,
   List,
   Plus,
   School,
 } from 'lucide-react';
+import { exportAssessmentsPdf } from '../lib/exportPdf';
 
 interface CalendarViewProps {
   assessments: Assessment[];
@@ -232,6 +234,24 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
               <List className="w-4 h-4" />
             </button>
           </div>
+
+          {/* Quick Export Monthly Calendar PDF (A4 Landscape) */}
+          <button
+            type="button"
+            onClick={() => {
+              const filterTitle = selectedClass !== 'all' ? `Turma: ${selectedClass}` : selectedLevel !== 'all' ? `${selectedLevel}` : 'Todas as Turmas';
+              exportAssessmentsPdf(filteredAssessments, classes, {
+                filterTitle: `Calendário Mensal · ${filterTitle}`,
+                mode: 'calendar'
+              });
+            }}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 hover:text-sky-800 rounded-xl border border-sky-200/80 text-xs font-semibold shadow-2xs transition active:scale-95 shrink-0"
+            title="Baixar calendário deste mês em PDF no formato A4 Horizontal"
+          >
+            <FileDown className="w-3.5 h-3.5 text-sky-600" />
+            <span className="hidden sm:inline">Exportar Calendário (PDF)</span>
+            <span className="sm:hidden">PDF A4</span>
+          </button>
         </div>
       </div>
 

@@ -132,20 +132,22 @@ export default function App() {
           <div className="flex items-center justify-between h-16 sm:h-18 gap-3">
             {/* School Brand Identity */}
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-sky-500 via-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-md shadow-sky-500/20 shrink-0 border border-white/20">
-                PS
-              </div>
+              <img
+                src="/logo.png"
+                alt="Colégio Portal"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl object-cover shadow-md shadow-sky-500/20 shrink-0 border border-sky-400/40 bg-slate-900"
+              />
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <h1 className="font-extrabold text-sm sm:text-base tracking-tight truncate text-white">
-                    COLÉGIO PORTAL DO SABER
+                    COLÉGIO PORTAL
                   </h1>
                   <span className="hidden sm:inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30">
-                    SRE Carangola
+                    AvaliaPortal
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-300 truncate">
-                  AvaliaPortal · Calendário e Agendamento Pedagógico
+                  Sistema de Gestão e Calendário de Avaliações Escolares
                 </p>
               </div>
             </div>
@@ -302,8 +304,9 @@ export default function App() {
       {/* Clean Institutional Footer */}
       <footer className="bg-white/70 backdrop-blur-md border-t border-slate-200/80 py-5 px-4 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div>
-            Colégio Portal do Saber · SRE Carangola · Superintendência Regional de Ensino
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="Colégio Portal" className="w-5 h-5 rounded-full object-cover inline-block" />
+            <span>Colégio Portal · Sistema Oficial de Agendamento e Calendário de Avaliações</span>
           </div>
           <div className="text-[11px] text-slate-400">
             Regra Pedagógica de Agendamento: 1 avaliação diária por turma

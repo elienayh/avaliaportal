@@ -452,25 +452,36 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <span>Baixar Versão Atual (.zip)</span>
               </a>
 
-              {/* PDF Exporters */}
+              {/* PDF Exporters - A4 Horizontal Monthly Calendar */}
               <button
                 type="button"
-                onClick={() => exportAssessmentsPdf(filteredAssessments, classes, 'class')}
-                className="inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition"
-                title="Exporta PDF agrupando por Turma"
+                onClick={() => {
+                  const filterTitle = filterClass ? `Turma: ${filterClass}` : filterSubject ? `Disciplina: ${filterSubject}` : 'Todas as Turmas';
+                  exportAssessmentsPdf(filteredAssessments, classes, {
+                    filterTitle: `Calendário Mensal · ${filterTitle}`,
+                    mode: 'calendar'
+                  });
+                }}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white rounded-xl text-xs font-bold shadow-xs transition active:scale-95"
+                title="Gera PDF em formato A4 Horizontal como um calendário mensal completo com os horários"
               >
-                <FileDown className="w-4 h-4 text-slate-500" />
-                <span>PDF por Turma</span>
+                <FileDown className="w-4 h-4 text-sky-200" />
+                <span>Exportar Calendário Mensal (A4)</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => exportAssessmentsPdf(filteredAssessments, classes, 'subject')}
+                onClick={() => {
+                  exportAssessmentsPdf(filteredAssessments, classes, {
+                    filterTitle: 'Agrupado por Turma',
+                    mode: 'class'
+                  });
+                }}
                 className="inline-flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition"
-                title="Exporta PDF agrupando por Disciplina"
+                title="Exporta PDF no formato A4 Horizontal com foco em turmas"
               >
                 <FileDown className="w-4 h-4 text-slate-500" />
-                <span>PDF por Disciplina</span>
+                <span>Por Turma</span>
               </button>
 
               <button

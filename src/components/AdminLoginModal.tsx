@@ -175,14 +175,22 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ open, onClose,
             <X className="w-5 h-5" />
           </button>
 
-          <div className="w-10 h-10 rounded-2xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center mb-3 text-sky-400 shadow-inner">
-            <Lock className="w-5 h-5" />
+          <div className="flex items-center gap-3 mb-3">
+            <img
+              src="/logo.png"
+              alt="Colégio Portal"
+              className="w-12 h-12 rounded-2xl object-cover border border-sky-400/40 shadow-md shadow-sky-500/20 bg-slate-950"
+            />
+            <div>
+              <span className="text-[10px] uppercase font-bold tracking-wider text-sky-400">
+                Colégio Portal
+              </span>
+              <h2 className="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
+                Acesso da Coordenação
+              </h2>
+            </div>
           </div>
-
-          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-white">
-            Acesso da Coordenação
-          </h2>
-          <p className="text-xs text-slate-300 mt-1 leading-relaxed">
+          <p className="text-xs text-slate-300 leading-relaxed">
             Painel exclusivo para a equipe de coordenação e administração pedagógica.
           </p>
         </div>
@@ -296,7 +304,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ open, onClose,
               <Shield className="w-3.5 h-3.5 text-emerald-500" />
               Sessão autenticada e criptografada
             </span>
-            <span>Colégio Portal do Saber</span>
+            <span>Colégio Portal</span>
           </div>
         </div>
       </div>
