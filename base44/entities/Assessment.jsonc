@@ -1,0 +1,61 @@
+{
+  "name": "Assessment",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da avalia\u00e7\u00e3o no formato ISO YYYY-MM-DD."
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Nome do professor (informado manualmente ou vinculado a um professor cadastrado)."
+    },
+    "teacher_id": {
+      "type": "string",
+      "description": "ID do professor cadastrado, quando aplic\u00e1vel."
+    },
+    "subject": {
+      "type": "string",
+      "description": "Disciplina da avalia\u00e7\u00e3o."
+    },
+    "class_name": {
+      "type": "string",
+      "description": "Turma da avalia\u00e7\u00e3o. A regra de uma avalia\u00e7\u00e3o por turma por dia \u00e9 aplicada na aplica\u00e7\u00e3o."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Avalia\u00e7\u00e3o",
+        "Simulado",
+        "Trabalho",
+        "Atividade"
+      ],
+      "default": "Avalia\u00e7\u00e3o",
+      "description": "Tipo da avalia\u00e7\u00e3o."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es opcionais."
+    }
+  },
+  "required": [
+    "date",
+    "teacher_name",
+    "subject",
+    "class_name",
+    "type"
+  ],
+  "rls": {
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

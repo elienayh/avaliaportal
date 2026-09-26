@@ -1,0 +1,52 @@
+{
+  "name": "SchedulingSettings",
+  "type": "object",
+  "properties": {
+    "medio_start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Primeiro dia do per\u00edodo de avalia\u00e7\u00f5es do Ensino M\u00e9dio."
+    },
+    "medio_end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "\u00daltimo dia do per\u00edodo de avalia\u00e7\u00f5es do Ensino M\u00e9dio."
+    },
+    "fundamental_start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Primeiro dia do per\u00edodo de avalia\u00e7\u00f5es do Ensino Fundamental."
+    },
+    "fundamental_end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "\u00daltimo dia do per\u00edodo de avalia\u00e7\u00f5es do Ensino Fundamental."
+    },
+    "blocked_dates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      },
+      "description": "Dias bloqueados para marca\u00e7\u00e3o (feriados, recessos)."
+    }
+  },
+  "required": [],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
